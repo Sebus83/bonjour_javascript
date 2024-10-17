@@ -13,24 +13,24 @@ function sayHello(hour){
    const firstName = prompt("Quel est ton prénom ?") 
    
    if (hour <= 17){
-       let message = "Bonjour !"
+       let message = ("Bonjour " + firstName + " !")
+       document.querySelector('h1').innerText = message;
     
   //console.log(message)
   
-        message = ("Bonjour " + firstName + " !")
   
-  //console.log(message)
       
     } 
     else 
     { 
-      let message = "Bonsoir !"
+      let message = ("Bonsoir " + firstName + " !")
+      document.querySelector('h1').innerText = message;
     
   //console.log(message)
-  
-        message = ("Bonsoir " + firstName + " !")
-  
-        document.querySelector('h1').innerText = message;
+   
+        
   }
+
+  
   }
-sayHello(19)
+sayHello(14)
