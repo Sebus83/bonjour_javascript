@@ -9,28 +9,20 @@
 //console.log(message)
 
 //encapsule le code précédent
-function sayHello(hour){
-   const firstName = prompt("Quel est ton prénom ?") 
-   
-   if (hour <= 17){
-       let message = ("Bonjour " + firstName + " !")
-       document.querySelector('h1').innerText = message;
-    
-  //console.log(message)
+function sayHello() {
+  const firstName = prompt("Quel est ton prénom ?");
+  const date = new Date();
+  const hours = date.getHours();
   
-  
-      
-    } 
-    else 
-    { 
-      let message = ("Bonsoir " + firstName + " !")
-      document.querySelector('h1').innerText = message;
-    
-  //console.log(message)
-   
-        
+  let message;
+  if (hours <= 17) {
+      message = `Bonjour ${firstName} !`;
+  } else {
+      message = `Bonsoir ${firstName} !`;
   }
+  
+  document.querySelector('h1').innerText = message;
+  
+}
 
-  
-  }
-sayHello(14)
+sayHello();
